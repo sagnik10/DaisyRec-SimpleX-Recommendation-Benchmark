@@ -1,0 +1,16 @@
+{
+  "platform": "Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "executable": "/home/sagniksen/.venvs/daisyrec/bin/python",
+  "packages": {
+    "torch": "2.5.1+cpu",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4",
+    "optuna": "4.1.0",
+    "scipy": "1.14.1",
+    "sklearn": "1.5.2",
+    "matplotlib": "3.9.2"
+  },
+  "pandas_import": "passed",
+  "torch_import": "passed"
+}

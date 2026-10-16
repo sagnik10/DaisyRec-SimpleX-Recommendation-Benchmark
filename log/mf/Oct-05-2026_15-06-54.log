@@ -1,0 +1,64 @@
+Mon 05 Oct 2026 15:06:54 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 4, 'num_workers': 0, 'torch_threads': 2, 'study_name': None, 'study_storage': None, 'run_dir': 'artifacts/verified', 'tune_testset': False, 'tune_pack': '{"factors": {"min": 32, "max": 128, "step": 32}, "lr": {"min": 0.001, "max": 0.05, "step": 0.005}, "reg_1": {"min": 0.0, "max": 0.01, "step": 0.001}, "reg_2": {"min": 0.0, "max": 0.01, "step": 0.001}, "batch_size": [256, 512, 1024]}', 'algo_name': 'mf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 10, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 1024, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'ml-50k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision', 'coverage', 'gini', 'entropy'], 'factors': 32, 'epochs': 20, 'lr': 0.021, 'reg_1': 0.001, 'reg_2': 0.0}
+Mon 05 Oct 2026 15:06:54 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 8, 'num_workers': 0, 'torch_threads': 2, 'study_name': None, 'study_storage': None, 'run_dir': 'artifacts/verified', 'tune_testset': False, 'tune_pack': '{"factors": {"min": 32, "max": 128, "step": 32}, "lr": {"min": 0.001, "max": 0.05, "step": 0.005}, "reg_1": {"min": 0.0, "max": 0.01, "step": 0.001}, "reg_2": {"min": 0.0, "max": 0.01, "step": 0.001}, "batch_size": [256, 512, 1024]}', 'algo_name': 'mf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 10, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 1024, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'yelp-200k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision', 'coverage', 'gini', 'entropy'], 'factors': 32, 'epochs': 20, 'lr': 0.021, 'reg_1': 0.001, 'reg_2': 0.0}
+Mon 05 Oct 2026 15:06:55 INFO - Current data path is: data/ml-50k/, make sure you put the right raw data into it...
+Mon 05 Oct 2026 15:06:55 INFO - Current data path is: data/yelp-200k/, make sure you put the right raw data into it...
+Mon 05 Oct 2026 15:06:56 INFO - Finish loading [ml-50k]-[origin] dataset
+Mon 05 Oct 2026 15:06:57 INFO - Finish loading [yelp-200k]-[origin] dataset
+Mon 05 Oct 2026 15:07:20 INFO - Epoch 1/20: loss=110966.318527
+Mon 05 Oct 2026 15:07:26 INFO - Epoch 2/20: loss=110728.696777
+Mon 05 Oct 2026 15:07:32 INFO - Epoch 3/20: loss=109216.100586
+Mon 05 Oct 2026 15:07:39 INFO - Epoch 4/20: loss=104470.171722
+Mon 05 Oct 2026 15:07:43 INFO - Epoch 5/20: loss=96415.942169
+Mon 05 Oct 2026 15:07:49 INFO - Epoch 6/20: loss=85722.447792
+Mon 05 Oct 2026 15:07:54 INFO - Epoch 7/20: loss=73564.606888
+Mon 05 Oct 2026 15:07:56 INFO - Epoch 1/20: loss=194848.006058
+Mon 05 Oct 2026 15:07:58 INFO - Epoch 8/20: loss=61027.731911
+Mon 05 Oct 2026 15:08:02 INFO - Epoch 9/20: loss=49298.897614
+Mon 05 Oct 2026 15:08:04 INFO - Epoch 2/20: loss=194573.453262
+Mon 05 Oct 2026 15:08:05 INFO - Epoch 10/20: loss=39348.146221
+Mon 05 Oct 2026 15:08:10 INFO - Epoch 11/20: loss=31540.136013
+Mon 05 Oct 2026 15:08:13 INFO - Epoch 3/20: loss=193469.607712
+Mon 05 Oct 2026 15:08:15 INFO - Epoch 12/20: loss=25688.855804
+Mon 05 Oct 2026 15:08:21 INFO - Epoch 13/20: loss=21371.795910
+Mon 05 Oct 2026 15:08:22 INFO - Epoch 4/20: loss=191327.872498
+Mon 05 Oct 2026 15:08:27 INFO - Epoch 14/20: loss=18177.604002
+Mon 05 Oct 2026 15:08:34 INFO - Epoch 15/20: loss=15786.509628
+Mon 05 Oct 2026 15:08:37 INFO - Epoch 5/20: loss=188156.704269
+Mon 05 Oct 2026 15:08:39 INFO - Epoch 16/20: loss=13970.352457
+Mon 05 Oct 2026 15:08:44 INFO - Epoch 17/20: loss=12569.860144
+Mon 05 Oct 2026 15:08:47 INFO - Epoch 6/20: loss=183689.739334
+Mon 05 Oct 2026 15:08:48 INFO - Epoch 18/20: loss=11473.722805
+Mon 05 Oct 2026 15:08:51 INFO - Epoch 19/20: loss=10603.918295
+Mon 05 Oct 2026 15:08:55 INFO - Epoch 20/20: loss=9904.849100
+Mon 05 Oct 2026 15:08:55 INFO - Epoch 7/20: loss=178002.363113
+Mon 05 Oct 2026 15:09:01 INFO - Recall@10: 0.0352
+Mon 05 Oct 2026 15:09:01 INFO - MRR@10: 0.0692
+Mon 05 Oct 2026 15:09:01 INFO - NDCG@10: 0.0870
+Mon 05 Oct 2026 15:09:01 INFO - Hit Ratio@10: 0.1677
+Mon 05 Oct 2026 15:09:01 INFO - Precision@10: 0.0201
+Mon 05 Oct 2026 15:09:01 INFO - Coverage@10: 0.5013
+Mon 05 Oct 2026 15:09:01 INFO - Gini@10: 0.6245
+Mon 05 Oct 2026 15:09:01 INFO - Entropy@10: 9.4804
+Mon 05 Oct 2026 15:09:01 INFO - Results saved to artifacts/verified/results/ml-50k; training seconds=120.704
+Mon 05 Oct 2026 15:09:06 INFO - Epoch 8/20: loss=171043.635010
+Mon 05 Oct 2026 15:09:13 INFO - Epoch 9/20: loss=162606.055664
+Mon 05 Oct 2026 15:09:20 INFO - Epoch 10/20: loss=152555.488007
+Mon 05 Oct 2026 15:09:25 INFO - Epoch 11/20: loss=140940.582199
+Mon 05 Oct 2026 15:09:32 INFO - Epoch 12/20: loss=128101.343460
+Mon 05 Oct 2026 15:09:38 INFO - Epoch 13/20: loss=114664.433044
+Mon 05 Oct 2026 15:09:44 INFO - Epoch 14/20: loss=101339.812912
+Mon 05 Oct 2026 15:09:51 INFO - Epoch 15/20: loss=88739.850441
+Mon 05 Oct 2026 15:09:56 INFO - Epoch 16/20: loss=77278.373154
+Mon 05 Oct 2026 15:10:02 INFO - Epoch 17/20: loss=67161.815414
+Mon 05 Oct 2026 15:10:09 INFO - Epoch 18/20: loss=58427.746407
+Mon 05 Oct 2026 15:10:15 INFO - Epoch 19/20: loss=51006.690823
+Mon 05 Oct 2026 15:10:22 INFO - Epoch 20/20: loss=44766.537434
+Mon 05 Oct 2026 15:10:42 INFO - Recall@10: 0.0248
+Mon 05 Oct 2026 15:10:42 INFO - MRR@10: 0.0244
+Mon 05 Oct 2026 15:10:42 INFO - NDCG@10: 0.0329
+Mon 05 Oct 2026 15:10:42 INFO - Hit Ratio@10: 0.0651
+Mon 05 Oct 2026 15:10:42 INFO - Precision@10: 0.0071
+Mon 05 Oct 2026 15:10:42 INFO - Coverage@10: 0.4317
+Mon 05 Oct 2026 15:10:42 INFO - Gini@10: 0.5762
+Mon 05 Oct 2026 15:10:42 INFO - Entropy@10: 11.5345
+Mon 05 Oct 2026 15:10:42 INFO - Results saved to artifacts/verified/results/yelp-200k; training seconds=208.945

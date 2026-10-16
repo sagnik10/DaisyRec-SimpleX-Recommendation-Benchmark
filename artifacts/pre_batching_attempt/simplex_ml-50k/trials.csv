@@ -1,0 +1,2 @@
+trial,state,validation_ndcg,ndcg_k,duration_seconds,num_ng,factors,batch_size,lr,reg_1,reg_2,margin,negative_weight,dropout,gamma
+0,COMPLETE,0.018464587717641458,10,199.440398,4,32,512,0.005000000000000001,0,0,0.9,10,0.3,0.5

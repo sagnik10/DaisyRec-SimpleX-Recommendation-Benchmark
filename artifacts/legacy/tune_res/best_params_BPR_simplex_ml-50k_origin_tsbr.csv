@@ -1,0 +1,2 @@
+factors,batch_size,lr,reg_1,reg_2,margin,negative_weight,dropout,ndcg
+64,256,0.0055,0,0,0.5,10,0.3,0.0661

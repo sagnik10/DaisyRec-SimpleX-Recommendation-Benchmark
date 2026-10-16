@@ -1,0 +1,101 @@
+05 Oct 13:41 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 4, 'num_workers': 0, 'torch_threads': 2, 'study_name': None, 'study_storage': None, 'run_dir': 'artifacts/verified', 'tune_testset': False, 'tune_pack': '{"factors": {"min": 32, "max": 128, "step": 32}, "lr": {"min": 0.001, "max": 0.05, "step": 0.005}, "reg_1": {"min": 0.0, "max": 0.01, "step": 0.001}, "reg_2": {"min": 0.0, "max": 0.01, "step": 0.001}, "batch_size": [256, 512, 1024]}', 'algo_name': 'mf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 10, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 1024, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'ml-50k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision', 'coverage', 'gini', 'entropy'], 'factors': 64, 'epochs': 20, 'lr': 0.021, 'reg_1': 0.001, 'reg_2': 0.008}
+05 Oct 13:41 INFO - Current data path is: data/ml-50k/, make sure you put the right raw data into it...
+05 Oct 13:41 INFO - Finish loading [ml-50k]-[origin] dataset
+[I 2026-10-05 13:41:15,388] A new study created in RDB with name: mf_ml-50k
+/home/sagniksen/.venvs/daisyrec/lib/python3.12/site-packages/optuna/distributions.py:693: UserWarning: The distribution is specified by [0.001, 0.05] and step=0.005, but the range is not divisible by `step`. It will be replaced by [0.001, 0.046].
+  warnings.warn(
+05 Oct 13:41 INFO - Epoch 1/20: loss=99871.035370
+05 Oct 13:41 INFO - Epoch 2/20: loss=99669.466736
+05 Oct 13:41 INFO - Epoch 3/20: loss=98419.051514
+05 Oct 13:41 INFO - Epoch 4/20: loss=94505.405579
+05 Oct 13:41 INFO - Epoch 5/20: loss=87813.250732
+05 Oct 13:41 INFO - Epoch 6/20: loss=78896.867767
+05 Oct 13:41 INFO - Epoch 7/20: loss=68512.710358
+05 Oct 13:41 INFO - Epoch 8/20: loss=57651.761505
+05 Oct 13:41 INFO - Epoch 9/20: loss=47343.923187
+05 Oct 13:41 INFO - Epoch 10/20: loss=38354.154266
+05 Oct 13:41 INFO - Epoch 11/20: loss=31035.442551
+05 Oct 13:41 INFO - Epoch 12/20: loss=25363.544846
+05 Oct 13:41 INFO - Epoch 13/20: loss=21077.104118
+05 Oct 13:41 INFO - Epoch 14/20: loss=17857.891678
+05 Oct 13:41 INFO - Epoch 15/20: loss=15426.292419
+05 Oct 13:41 INFO - Epoch 16/20: loss=13569.433167
+05 Oct 13:41 INFO - Epoch 17/20: loss=12132.357880
+05 Oct 13:41 INFO - Epoch 18/20: loss=11005.702076
+05 Oct 13:41 INFO - Epoch 19/20: loss=10110.106934
+05 Oct 13:41 INFO - Epoch 20/20: loss=9389.770874
+05 Oct 13:41 INFO - Trial 0, fold 0: validation NDCG@10=0.069477542695
+[I 2026-10-05 13:41:38,025] Trial 0 finished with value: 0.0694775426954591 and parameters: {'factors': 32, 'lr': 0.021, 'reg_1': 0.001, 'reg_2': 0.0, 'batch_size': 1024}. Best is trial 0 with value: 0.0694775426954591.
+/home/sagniksen/.venvs/daisyrec/lib/python3.12/site-packages/optuna/distributions.py:693: UserWarning: The distribution is specified by [0.001, 0.05] and step=0.005, but the range is not divisible by `step`. It will be replaced by [0.001, 0.046].
+  warnings.warn(
+05 Oct 13:41 INFO - Epoch 1/20: loss=100572.708160
+05 Oct 13:41 INFO - Epoch 2/20: loss=100004.829651
+05 Oct 13:41 INFO - Epoch 3/20: loss=99937.835083
+05 Oct 13:41 INFO - Epoch 4/20: loss=99915.761353
+05 Oct 13:41 INFO - Epoch 5/20: loss=99905.782990
+05 Oct 13:41 INFO - Epoch 6/20: loss=99900.411346
+05 Oct 13:41 INFO - Epoch 7/20: loss=99897.085541
+05 Oct 13:41 INFO - Epoch 8/20: loss=99895.323181
+05 Oct 13:41 INFO - Epoch 9/20: loss=99893.895325
+05 Oct 13:41 INFO - Epoch 10/20: loss=99892.909027
+05 Oct 13:42 INFO - Epoch 11/20: loss=99892.265350
+05 Oct 13:42 INFO - Epoch 12/20: loss=99891.712250
+05 Oct 13:42 INFO - Epoch 13/20: loss=99891.307678
+05 Oct 13:42 INFO - Epoch 14/20: loss=99891.064728
+05 Oct 13:42 INFO - Epoch 15/20: loss=99890.816620
+05 Oct 13:42 INFO - Epoch 16/20: loss=99890.589447
+05 Oct 13:42 INFO - Epoch 17/20: loss=99890.547607
+05 Oct 13:42 INFO - Epoch 18/20: loss=99890.451569
+05 Oct 13:42 INFO - Epoch 19/20: loss=99890.199524
+05 Oct 13:42 INFO - Epoch 20/20: loss=99890.445251
+05 Oct 13:42 INFO - Trial 1, fold 0: validation NDCG@10=0.061085460798
+[I 2026-10-05 13:42:17,782] Trial 1 finished with value: 0.061085460797556834 and parameters: {'factors': 96, 'lr': 0.041, 'reg_1': 0.007, 'reg_2': 0.009000000000000001, 'batch_size': 1024}. Best is trial 0 with value: 0.0694775426954591.
+/home/sagniksen/.venvs/daisyrec/lib/python3.12/site-packages/optuna/distributions.py:693: UserWarning: The distribution is specified by [0.001, 0.05] and step=0.005, but the range is not divisible by `step`. It will be replaced by [0.001, 0.046].
+  warnings.warn(
+05 Oct 13:42 INFO - Epoch 1/20: loss=100240.715775
+05 Oct 13:42 INFO - Epoch 2/20: loss=100010.279190
+05 Oct 13:42 INFO - Epoch 3/20: loss=99723.731369
+05 Oct 13:42 INFO - Epoch 4/20: loss=98728.021751
+05 Oct 13:42 INFO - Epoch 5/20: loss=96497.011459
+05 Oct 13:42 INFO - Epoch 6/20: loss=93206.262192
+05 Oct 13:44 INFO - Epoch 7/20: loss=88979.624046
+05 Oct 13:44 INFO - Epoch 8/20: loss=83512.741913
+05 Oct 13:44 INFO - Epoch 9/20: loss=77079.077354
+05 Oct 13:44 INFO - Epoch 10/20: loss=70018.940819
+05 Oct 13:44 INFO - Epoch 11/20: loss=62636.503429
+05 Oct 13:44 INFO - Epoch 12/20: loss=55222.487457
+05 Oct 13:44 INFO - Epoch 13/20: loss=48169.722477
+05 Oct 13:45 INFO - Epoch 14/20: loss=41834.793959
+05 Oct 13:45 INFO - Epoch 15/20: loss=36389.001240
+05 Oct 13:45 INFO - Epoch 16/20: loss=31836.874786
+05 Oct 13:45 INFO - Epoch 17/20: loss=28102.915262
+05 Oct 13:45 INFO - Epoch 18/20: loss=25079.441977
+05 Oct 13:45 INFO - Epoch 19/20: loss=22653.331249
+05 Oct 13:45 INFO - Epoch 20/20: loss=20713.961290
+05 Oct 13:45 INFO - Trial 2, fold 0: validation NDCG@10=0.053138096253
+[I 2026-10-05 13:45:29,133] Trial 2 finished with value: 0.05313809625280229 and parameters: {'factors': 64, 'lr': 0.021, 'reg_1': 0.003, 'reg_2': 0.006, 'batch_size': 256}. Best is trial 0 with value: 0.0694775426954591.
+/home/sagniksen/.venvs/daisyrec/lib/python3.12/site-packages/optuna/distributions.py:693: UserWarning: The distribution is specified by [0.001, 0.05] and step=0.005, but the range is not divisible by `step`. It will be replaced by [0.001, 0.046].
+  warnings.warn(
+05 Oct 13:45 INFO - Epoch 1/20: loss=100846.039749
+05 Oct 13:45 INFO - Epoch 2/20: loss=100226.834137
+05 Oct 13:45 INFO - Epoch 3/20: loss=100038.420364
+05 Oct 13:45 INFO - Epoch 4/20: loss=99958.135826
+05 Oct 13:45 INFO - Epoch 5/20: loss=99916.718399
+05 Oct 13:45 INFO - Epoch 6/20: loss=99892.591049
+05 Oct 13:45 INFO - Epoch 7/20: loss=99877.196800
+05 Oct 13:45 INFO - Epoch 8/20: loss=99866.641663
+05 Oct 13:46 INFO - Epoch 9/20: loss=99859.037956
+05 Oct 13:46 INFO - Epoch 10/20: loss=99853.410103
+05 Oct 13:46 INFO - Epoch 11/20: loss=99849.051010
+05 Oct 13:46 INFO - Epoch 12/20: loss=99845.706970
+05 Oct 13:46 INFO - Epoch 13/20: loss=99842.970940
+05 Oct 13:46 INFO - Epoch 14/20: loss=99840.796631
+05 Oct 13:46 INFO - Epoch 15/20: loss=99838.968407
+05 Oct 13:46 INFO - Epoch 16/20: loss=99837.507080
+05 Oct 13:46 INFO - Epoch 17/20: loss=99836.264923
+05 Oct 13:46 INFO - Epoch 18/20: loss=99835.158401
+05 Oct 13:46 INFO - Epoch 19/20: loss=99834.293442
+05 Oct 13:46 INFO - Epoch 20/20: loss=99833.470917
+05 Oct 13:46 INFO - Trial 3, fold 0: validation NDCG@10=0.018043491010
+[I 2026-10-05 13:46:29,446] Trial 3 finished with value: 0.01804349100951424 and parameters: {'factors': 64, 'lr': 0.011, 'reg_1': 0.008, 'reg_2': 0.0, 'batch_size': 512}. Best is trial 0 with value: 0.0694775426954591.
+05 Oct 13:46 INFO - Best trial 0: validation NDCG@10=0.069477542695

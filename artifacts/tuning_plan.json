@@ -1,0 +1,233 @@
+[
+  {
+    "model": "mf",
+    "dataset": "ml-50k",
+    "source_log": "Oct-01-2026_20-21-15.log",
+    "trials": 4,
+    "epochs": 20,
+    "search_space": {
+      "factors": {
+        "min": 32,
+        "max": 128,
+        "step": 32
+      },
+      "lr": {
+        "min": 0.001,
+        "max": 0.05,
+        "step": 0.005
+      },
+      "reg_1": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "reg_2": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "batch_size": [
+        256,
+        512,
+        1024
+      ]
+    }
+  },
+  {
+    "model": "mf",
+    "dataset": "yelp-200k",
+    "source_log": "Oct-01-2026_17-37-27.log",
+    "trials": 8,
+    "epochs": 20,
+    "search_space": {
+      "factors": {
+        "min": 32,
+        "max": 128,
+        "step": 32
+      },
+      "lr": {
+        "min": 0.001,
+        "max": 0.05,
+        "step": 0.005
+      },
+      "reg_1": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "reg_2": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "batch_size": [
+        256,
+        512,
+        1024
+      ]
+    }
+  },
+  {
+    "model": "neumf",
+    "dataset": "ml-50k",
+    "source_log": "Oct-01-2026_21-10-42.log",
+    "trials": 4,
+    "epochs": 30,
+    "search_space": {
+      "factors": {
+        "min": 16,
+        "max": 64,
+        "step": 16
+      },
+      "lr": {
+        "min": 0.0005,
+        "max": 0.01,
+        "step": 0.0005
+      },
+      "num_layers": [
+        1,
+        2,
+        3
+      ],
+      "dropout": {
+        "min": 0.0,
+        "max": 0.5,
+        "step": 0.1
+      },
+      "reg_1": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "reg_2": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "batch_size": [
+        256,
+        512
+      ]
+    }
+  },
+  {
+    "model": "neumf",
+    "dataset": "yelp-200k",
+    "source_log": "Oct-01-2026_21-08-42.log",
+    "trials": 8,
+    "epochs": 30,
+    "search_space": {
+      "factors": {
+        "min": 16,
+        "max": 64,
+        "step": 16
+      },
+      "lr": {
+        "min": 0.0005,
+        "max": 0.01,
+        "step": 0.0005
+      },
+      "num_layers": [
+        1,
+        2,
+        3
+      ],
+      "dropout": {
+        "min": 0.0,
+        "max": 0.5,
+        "step": 0.1
+      },
+      "reg_1": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "reg_2": {
+        "min": 0.0,
+        "max": 0.01,
+        "step": 0.001
+      },
+      "batch_size": [
+        256,
+        512
+      ]
+    }
+  },
+  {
+    "model": "simplex",
+    "dataset": "ml-50k",
+    "source_log": "Oct-01-2026_21-12-13.log",
+    "trials": 4,
+    "epochs": 30,
+    "search_space": {
+      "factors": {
+        "min": 32,
+        "max": 128,
+        "step": 32
+      },
+      "lr": {
+        "min": 0.0005,
+        "max": 0.01,
+        "step": 0.0005
+      },
+      "margin": [
+        0.5,
+        0.7,
+        0.9
+      ],
+      "negative_weight": [
+        5,
+        10,
+        20
+      ],
+      "dropout": {
+        "min": 0.0,
+        "max": 0.3,
+        "step": 0.1
+      },
+      "batch_size": [
+        256,
+        512
+      ]
+    }
+  },
+  {
+    "model": "simplex",
+    "dataset": "yelp-200k",
+    "source_log": "Oct-04-2026_10-42-42.log",
+    "trials": 8,
+    "epochs": 30,
+    "search_space": {
+      "factors": {
+        "min": 32,
+        "max": 128,
+        "step": 32
+      },
+      "lr": {
+        "min": 0.0005,
+        "max": 0.01,
+        "step": 0.0005
+      },
+      "margin": [
+        0.5,
+        0.7,
+        0.9
+      ],
+      "negative_weight": [
+        5,
+        10,
+        20
+      ],
+      "dropout": {
+        "min": 0.0,
+        "max": 0.3,
+        "step": 0.1
+      },
+      "batch_size": [
+        128,
+        256,
+        512
+      ]
+    }
+  }
+]

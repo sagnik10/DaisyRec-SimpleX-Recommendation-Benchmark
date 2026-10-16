@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "model": "mf",
+      "dataset": "ml-50k",
+      "result": "artifacts/verified/results/ml-50k/mf_kpi_results.csv",
+      "status": "passed",
+      "sha256": "3d2d191648d83775e4849d8899e647f002aba06c01e7d55fa9ac5c194d574850",
+      "matched_training_recipe": true,
+      "selected_trial_recipe_match": true,
+      "current_code_match": true,
+      "current_data_match": true,
+      "saved_csv_match": true,
+      "package_versions_match": true,
+      "completed_trials": 4
+    },
+    {
+      "model": "mf",
+      "dataset": "yelp-200k",
+      "result": "artifacts/verified/results/yelp-200k/mf_kpi_results.csv",
+      "status": "passed",
+      "sha256": "e0ad567b96c69567abbc3e5d5e805dcd5e96cdce4541ddddba6bf33540ef323b",
+      "matched_training_recipe": true,
+      "selected_trial_recipe_match": true,
+      "current_code_match": true,
+      "current_data_match": true,
+      "saved_csv_match": true,
+      "package_versions_match": true,
+      "completed_trials": 8
+    },
+    {
+      "model": "neumf",
+      "dataset": "ml-50k",
+      "result": "artifacts/verified/results/ml-50k/neumf_kpi_results.csv",
+      "status": "passed",
+      "sha256": "fe4c092eecca74b2dbc6b5b6abb614ad46bec23afa2caf56414c54d7ba94a93f",
+      "matched_training_recipe": true,
+      "selected_trial_recipe_match": true,
+      "current_code_match": true,
+      "current_data_match": true,
+      "saved_csv_match": true,
+      "package_versions_match": true,
+      "completed_trials": 4
+    },
+    {
+      "model": "neumf",
+      "dataset": "yelp-200k",
+      "result": "artifacts/verified/results/yelp-200k/neumf_kpi_results.csv",
+      "status": "passed",
+      "sha256": "56847db31ba320354bc8d76cd999f71caa4c48a42de65fe0d9706b9664d60283",
+      "matched_training_recipe": true,
+      "selected_trial_recipe_match": true,
+      "current_code_match": true,
+      "current_data_match": true,
+      "saved_csv_match": true,
+      "package_versions_match": true,
+      "completed_trials": 8
+    },
+    {
+      "model": "simplex",
+      "dataset": "ml-50k",
+      "result": "artifacts/verified/results/ml-50k/simplex_kpi_results.csv",
+      "status": "passed",
+      "sha256": "9f41fe071be831763c62da99d75966cab653d8d24f8e33eac1cc631867607a1e",
+      "matched_training_recipe": true,
+      "selected_trial_recipe_match": true,
+      "current_code_match": true,
+      "current_data_match": true,
+      "saved_csv_match": true,
+      "package_versions_match": true,
+      "completed_trials": 4
+    },
+    {
+      "model": "simplex",
+      "dataset": "yelp-200k",
+      "result": "artifacts/verified/results/yelp-200k/simplex_kpi_results.csv",
+      "status": "passed",
+      "sha256": "4d0783867735be3c24ed0e110a32b12fcfeaa0d35b47ba98f031e2a508c2f0bc",
+      "matched_training_recipe": true,
+      "selected_trial_recipe_match": true,
+      "current_code_match": true,
+      "current_data_match": true,
+      "saved_csv_match": true,
+      "package_versions_match": true,
+      "completed_trials": 8
+    }
+  ]
+}

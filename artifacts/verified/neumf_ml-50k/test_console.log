@@ -1,0 +1,42 @@
+05 Oct 15:15 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 4, 'num_workers': 0, 'torch_threads': 2, 'study_name': None, 'study_storage': None, 'run_dir': 'artifacts/verified', 'tune_testset': False, 'tune_pack': '{"factors": {"min": 16, "max": 64, "step": 16}, "lr": {"min": 0.0005, "max": 0.01, "step": 0.0005}, "num_layers": [1, 2, 3], "dropout": {"min": 0.0, "max": 0.5, "step": 0.1}, "reg_1": {"min": 0.0, "max": 0.01, "step": 0.001}, "reg_2": {"min": 0.0, "max": 0.01, "step": 0.001}, "batch_size": [256, 512]}', 'algo_name': 'neumf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 10, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 256, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'ml-50k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision', 'coverage', 'gini', 'entropy'], 'factors': 16, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.005000000000000001, 'epochs': 30, 'reg_1': 0.009000000000000001, 'reg_2': 0.007, 'model_name': 'NeuMF', 'GMF_model': None, 'MLP_model': None}
+05 Oct 15:15 INFO - Current data path is: data/ml-50k/, make sure you put the right raw data into it...
+05 Oct 15:15 INFO - Finish loading [ml-50k]-[origin] dataset
+05 Oct 15:15 INFO - Epoch 1/30: loss=64158.694611
+05 Oct 15:15 INFO - Epoch 2/30: loss=37264.675087
+05 Oct 15:16 INFO - Epoch 3/30: loss=31517.500385
+05 Oct 15:16 INFO - Epoch 4/30: loss=29679.477798
+05 Oct 15:16 INFO - Epoch 5/30: loss=28886.212872
+05 Oct 15:17 INFO - Epoch 6/30: loss=28427.144363
+05 Oct 15:17 INFO - Epoch 7/30: loss=28062.339291
+05 Oct 15:17 INFO - Epoch 8/30: loss=27822.365520
+05 Oct 15:18 INFO - Epoch 9/30: loss=27775.611694
+05 Oct 15:18 INFO - Epoch 10/30: loss=27257.159916
+05 Oct 15:18 INFO - Epoch 11/30: loss=27160.606472
+05 Oct 15:18 INFO - Epoch 12/30: loss=27198.189701
+05 Oct 15:19 INFO - Epoch 13/30: loss=27097.672955
+05 Oct 15:19 INFO - Epoch 14/30: loss=26868.787941
+05 Oct 15:20 INFO - Epoch 15/30: loss=26590.224689
+05 Oct 15:20 INFO - Epoch 16/30: loss=26509.887611
+05 Oct 15:20 INFO - Epoch 17/30: loss=26186.896030
+05 Oct 15:21 INFO - Epoch 18/30: loss=26290.717831
+05 Oct 15:21 INFO - Epoch 19/30: loss=26057.875957
+05 Oct 15:21 INFO - Epoch 20/30: loss=25579.054005
+05 Oct 15:21 INFO - Epoch 21/30: loss=25889.064106
+05 Oct 15:22 INFO - Epoch 22/30: loss=25689.485855
+05 Oct 15:22 INFO - Epoch 23/30: loss=25524.914951
+05 Oct 15:23 INFO - Epoch 24/30: loss=25762.867859
+05 Oct 15:23 INFO - Epoch 25/30: loss=25321.621258
+05 Oct 15:23 INFO - Epoch 26/30: loss=25656.891991
+05 Oct 15:23 INFO - Epoch 27/30: loss=24939.400757
+05 Oct 15:24 INFO - Epoch 28/30: loss=24980.194736
+05 Oct 15:24 INFO - Epoch 29/30: loss=25264.086990
+05 Oct 15:24 INFO - Epoch 30/30: loss=24958.139603
+05 Oct 15:25 INFO - Recall@10: 0.0523
+05 Oct 15:25 INFO - MRR@10: 0.0968
+05 Oct 15:25 INFO - NDCG@10: 0.1201
+05 Oct 15:25 INFO - Hit Ratio@10: 0.2326
+05 Oct 15:25 INFO - Precision@10: 0.0281
+05 Oct 15:25 INFO - Coverage@10: 0.3302
+05 Oct 15:25 INFO - Gini@10: 0.7798
+05 Oct 15:25 INFO - Entropy@10: 7.7778
+05 Oct 15:25 INFO - Results saved to artifacts/verified/results/ml-50k; training seconds=593.257

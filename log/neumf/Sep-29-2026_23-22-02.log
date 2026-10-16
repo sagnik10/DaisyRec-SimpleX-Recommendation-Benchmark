@@ -1,0 +1,14 @@
+Tue 29 Sep 2026 23:22:02 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 30, 'tune_testset': False, 'tune_pack': '{}', 'algo_name': 'neumf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 50, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 256, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'ml-50k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision'], 'factors': 48, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.0045, 'epochs': 10, 'reg_1': 0.0, 'reg_2': 0.0, 'model_name': 'NeuMF', 'GMF_model': None, 'MLP_model': None}
+Tue 29 Sep 2026 23:22:02 INFO - Current data path is: data/ml-50k/, make sure you put the right raw data into it...
+Tue 29 Sep 2026 23:22:02 INFO - Finish loading [ml-50k]-[origin] dataset
+Tue 29 Sep 2026 23:25:02 INFO - Finish training: ml-50k origin neumf with BPR and uniform sampling, 178.1179
+Tue 29 Sep 2026 23:25:02 INFO - Start Calculating Metrics...
+Tue 29 Sep 2026 23:25:03 INFO - ==========================
+Tue 29 Sep 2026 23:25:03 INFO - Generate recommend list...
+Tue 29 Sep 2026 23:25:03 INFO - ==========================
+Tue 29 Sep 2026 23:25:05 INFO - Save metric@k result to res folder...
+Tue 29 Sep 2026 23:25:06 INFO - Recall@10: 0.0604
+Tue 29 Sep 2026 23:25:06 INFO - MRR@10: 0.1130
+Tue 29 Sep 2026 23:25:06 INFO - NDCG@10: 0.1412
+Tue 29 Sep 2026 23:25:06 INFO - Hit Ratio@10: 0.2706
+Tue 29 Sep 2026 23:25:06 INFO - Precision@10: 0.0329

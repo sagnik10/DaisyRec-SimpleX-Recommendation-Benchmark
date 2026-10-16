@@ -1,0 +1,212 @@
+Extending DaisyRec for Item Ranking
+1. Introduction
+This report represents the implementation and evaluation of the SimpleX model as a new recommender algorithm integrated into the DaisyRec library without altering the daisy code for the time ranking. The baseline models selected in this task are Matrix Factorization (MF) and Neural Matrix Factorization (NeuMF) for comparison purposes.
+The SimpleX algorithm uses Cosine Contrastive Loss (CCL) with a margin and negative margin.
+The two datasets chosen for this project are MovieLens 1M and Yelp dataset. These datasets are quite large and when trained on the algorithms, the computational power is quite large. To fasten the process, the data was sampled to only 50,000 interactions to ensure smooth training on limited hardware representation.
+Table 1. Dataset Statistics
+Dataset
+Users
+Items
+Interactions
+MovieLens-50K
+5620
+3098
+50,000
+Yelp-50K
+13736
+12287
+88692
+The statistical data was obtained by executing the code in the statistics.txt on the command line while in the directory daisy/.
+GitHub Repository: 
+[Insert your private GitHub repository link here]
+2. Extensions to DaisyRec
+The two baseline models selected are MF and NeuMF and the newly implemented model is SimpleX. 
+The main changes were:
+Creating SimpleXRecommender.py
+ 
+daisy/model/
+.
+Register
+ing
+ the model so that it can be selected via --algo_name 
+simplex
+.
+Adding support for the custom dataset names ml-50k and yelp-200k in the data loader to ensure less computational power.
+Fixed numpy compatibility issues (in1d -> isin) to ensure the pipeline runs smoothly with the recent library versions.
+The ml-50k and yelp-200k dataset were randomly generated from the original datasets.This was achieved by running a command to sample data found in Daisy-v2.0/daisy/dataset_sample.txt. The main reason for this was to utilize few computing resources during training since the big datasets are slow on a CPU computer.
+3. Experimental Setup
+The ML dataset was randomly sampled to approximately 50,000 interactions, and Yelp dataset sampled to 200,000. The original preprocessing included no filters at all with a sole purpose of retaining sufficient data. 
+T
+he data Train/validation/test splits followed DaisyRec’s time-aware split-by-ratio (TSBR) protocol with a 10% validation set held out from training.
+The n
+egative sampling used the uniform sampler with 4 negatives per positive. 
+The three 
+models were trained with BPR loss. 
+T
+he 
+metrics
+ used for 
+e
+valuation were Recall@10, NDCG@10, MRR@10, Hit Ratio@10 and Precision@10. 
+T
+he 
+h
+yperparameter 
+optimization
+ was performed with DaisyRec’s HyperOpt framework (Bayesian 
+optimization
+).
+Table 2. Hyperparameter Search Spaces
+Parameter
+MF / NeuMF
+SimpleX
+factors
+100
+64
+lr
+0.1
+0.001
+reg_1 / reg_2
+0
+0
+num_layers
+–
+0
+batch_size
+256
+256
+HyperOpt trials
+30
+8
+4. Hyperparameter Tuning
+The h
+yperparameter tuning was conducted for each of the three algorithms on both datasets. The optimisation target was validation NDCG@10. 
+T
+he figures below show 
+tuning progress:
+Table 3. Best Hyperparameters Selected via HyperOpt
+Model
+Dataset
+factors
+layers
+Batch size
+lr
+reg_1
+reg_2
+MF
+ML-50K
+64
+1024
+0.021
+0.001
+0.008
+MF
+Yelp-200K
+64
+1024
+0.036
+0.0
+0
+NeuMF
+ML-50K
+48
+3
+256
+0.0055
+0.002
+0.005
+NeuMF
+Yelp-200K
+16
+2
+256
+0.0065
+0.0
+0.01
+SimpleX
+ML-50K
+         64
+0
+256
+0.0055
+0
+0
+SimpleX
+Yelp-200K
+64
+256
+0.008
+0
+0
+The Table 3 above shows the best tune hyperparameters achieved after tuning on the datasets for every algorithm. For instance, After tunning, the best results can be achieved by 16 factors, 2 dense layers, batch size of 256, learning rate of 0.0065, reg_1 of 0 and reg_2 of 0.01 on Yelp-200K dataset for NeuMF
+The bar plots above visualize the best hyperparameters were achieved after how many trials and which trial was the best, for instance after 4 trials, the best hyperparameters were at trial 2 in NeuMF algorithm for ml-50k dataset.
+5. Testing Results and Analysis
+Final test performance using the selected hyperparameters is reported below.
+Table 4. Results on Yelp-200K
+Model
+Recall
+NDCG
+Precision
+Coverage
+Gini
+Entropy
+MF
+0.0223
+0.0318
+0.0067
+0.6768
+0.4899
+12.4380
+NeuMF
+0.0185
+0.0232
+0.0052
+0.507
+0.5106
+11.9781
+SimpleX
+0.0869
+0.0884
+0.0217
+0.8529
+0.4854
+12.7929
+Table 5. Results on ML-50K
+Model
+Recall
+NDCG
+Precision
+Coverage
+Gini
+Entropy
+MF
+0.0352
+0.0901
+0.0198
+0.5339
+0.6435
+9.4999
+NeuMF
+0.0138
+0.0395
+0.0099
+0.4254
+0.5066
+9.7443
+SimpleX
+0.0135
+0.0393
+0.0088
+0.6930
+0.6548
+9.8119
+Analysis
+In the Yelp-200k dataset shown in the Table 4 above, SimpleX algorithm significantly outperforms the two baseline models; MF and NeuMF, as shown by accuracy matrices. The SimpleX recommends a wide range of items as shown by the Coverage matrix (0.8529) and exposure is fair as shown by both gini (0.4854) and entropy (12.7929). The high wide coverage and relative exposure indicates that simplex generalizes sparse review data well due to SimpleX’s cosine contrastive loss and use of user history data embeddings.
+The three algorithms show a relatively balanced performance for the MovieLens dataset. SimpleX algorithm is outperformed by baseline models in accuracy matrices. However, SimpleX shows slightly wide coverage of 0.6548, NeuMF (0.4254) and MF (0.5339). In terms of exposure, the SimpleX was relatively better with a gini value of 0.6548 and entropy 9.8119.
+In conclusion, SimpleX shows better coverage in both datasets, indicating that it is recommended for recommender systems. SimpleX also facilitates a better exposure as shown in both gini performances. Lastly, SimpleX performs well in the diversity recommendation as shown by the entropy performance.
+6. References
+He, X., Deng, K., Wang, X., Li, Y., Zhang, Y., & Wang, M. (2020). LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation. Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, 639–648.
+He, X., Liao, L., Zhang, H., Nie, L., Hu, X., & Chua, T.-S. (2017). Neural Collaborative Filtering. Proceedings of the 26th International Conference on World Wide Web, 173–182.
+Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix Factorization Techniques for Recommender Systems. Computer, 42(8), 30–37.
+Sun, Z., Fang, H., Yang, J., Qu, X., Liu, H., Yu, D., Ong, Y.-S., & Zhang, J. (2022). DaisyRec 2.0: Benchmarking Recommendation for Rigorous Evaluation. IEEE Transactions on Pattern Analysis and Machine Intelligence.
+Sun, Z., Yu, D., Fang, H., Yang, J., Qu, X., Zhang, J., & Geng, C. (2020). Are We Evaluating Rigorously? Benchmarking Recommendation for Reproducible Evaluation and Fair Comparison. Proceedings of the 14th ACM Conference on Recommender Systems.

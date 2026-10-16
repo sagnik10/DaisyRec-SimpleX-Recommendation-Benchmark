@@ -1,0 +1,8 @@
+{
+  "trial": 2,
+  "validation_ndcg": 0.014399823723576278,
+  "ndcg_k": 10,
+  "complete_trials": 8,
+  "requested_trials": 8,
+  "tuning_complete": true
+}

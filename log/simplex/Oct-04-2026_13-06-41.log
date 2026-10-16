@@ -1,0 +1,15 @@
+Sun 04 Oct 2026 13:06:41 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 30, 'tune_testset': False, 'tune_pack': '{}', 'algo_name': 'simplex', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 50, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 256, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'yelp-200k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'ndcg', 'precision', 'coverage', 'gini', 'entropy'], 'factors': 64, 'lr': 0.008, 'reg_1': 0, 'reg_2': 0, 'epochs': 30, 'margin': 0.9, 'negative_weight': 10, 'dropout': 0.0}
+Sun 04 Oct 2026 13:06:41 INFO - Current data path is: data/yelp-200k/, make sure you put the right raw data into it...
+Sun 04 Oct 2026 13:06:41 INFO - Finish loading [yelp-200k]-[origin] dataset
+Sun 04 Oct 2026 16:04:32 INFO - Finish training: yelp-200k origin simplex with BPR and uniform sampling, 10666.9210
+Sun 04 Oct 2026 16:04:32 INFO - Start Calculating Metrics...
+Sun 04 Oct 2026 16:04:47 INFO - ==========================
+Sun 04 Oct 2026 16:04:47 INFO - Generate recommend list...
+Sun 04 Oct 2026 16:04:47 INFO - ==========================
+Sun 04 Oct 2026 16:04:49 INFO - Save metric@k result to res folder...
+Sun 04 Oct 2026 16:04:51 INFO - Recall@10: 0.0869
+Sun 04 Oct 2026 16:04:51 INFO - NDCG@10: 0.0884
+Sun 04 Oct 2026 16:04:51 INFO - Precision@10: 0.0217
+Sun 04 Oct 2026 16:04:51 INFO - Coverage@10: 0.8529
+Sun 04 Oct 2026 16:04:51 INFO - Gini@10: 0.4854
+Sun 04 Oct 2026 16:04:51 INFO - Entropy@10: 12.7929

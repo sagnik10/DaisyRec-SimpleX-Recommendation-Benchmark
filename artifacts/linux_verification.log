@@ -1,0 +1,26 @@
+{
+  "platform": "Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "executable": "/home/sagniksen/.venvs/daisyrec/bin/python",
+  "packages": {
+    "torch": "2.5.1+cpu",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4",
+    "optuna": "4.1.0",
+    "scipy": "1.14.1",
+    "sklearn": "1.5.2",
+    "matplotlib": "3.9.2"
+  },
+  "pandas_import": "passed",
+  "torch_import": "passed"
+}
+test_both_models_build_and_rank_single_user_from_training_split (__main__.ModelRegression.test_both_models_build_and_rank_single_user_from_training_split) ... ok
+test_history_mean_projection_empty_and_gradient (__main__.ModelRegression.test_history_mean_projection_empty_and_gradient) ... ok
+test_lightgcn_uses_normalized_graph_and_layer_average (__main__.ModelRegression.test_lightgcn_uses_normalized_graph_and_layer_average) ... ok
+test_training_history_is_copied_and_required (__main__.ModelRegression.test_training_history_is_copied_and_required) ... ok
+test_vector_batches_preserve_standard_loader_order (__main__.ModelRegression.test_vector_batches_preserve_standard_loader_order) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.560s
+
+OK

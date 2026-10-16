@@ -1,0 +1,2 @@
+factors,batch_size,lr,reg_1,reg_2,num_layers,ndcg
+32,128,0.026000000000000002,0.01,0.007,1,0.0190

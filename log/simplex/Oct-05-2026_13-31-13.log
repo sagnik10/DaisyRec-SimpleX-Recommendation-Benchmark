@@ -1,0 +1,51 @@
+Mon 05 Oct 2026 13:31:13 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 4, 'num_workers': 0, 'torch_threads': 2, 'study_name': None, 'study_storage': None, 'run_dir': 'artifacts/verified', 'tune_testset': False, 'tune_pack': '{"factors": {"min": 32, "max": 128, "step": 32}, "lr": {"min": 0.0005, "max": 0.01, "step": 0.0005}, "margin": [0.5, 0.7, 0.9], "negative_weight": [5, 10, 20], "dropout": {"min": 0.0, "max": 0.3, "step": 0.1}, "batch_size": [256, 512]}', 'algo_name': 'simplex', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 10, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 256, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'ml-50k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision'], 'factors': 64, 'lr': 0.0055, 'reg_1': 0, 'reg_2': 0, 'epochs': 30, 'margin': 0.5, 'negative_weight': 10, 'dropout': 0.3, 'gamma': 0.5}
+Mon 05 Oct 2026 13:31:13 INFO - Current data path is: data/ml-50k/, make sure you put the right raw data into it...
+Mon 05 Oct 2026 13:31:13 INFO - Current data path is: data/yelp-200k/, make sure you put the right raw data into it...
+Mon 05 Oct 2026 13:31:14 INFO - Finish loading [ml-50k]-[origin] dataset
+Mon 05 Oct 2026 13:31:14 INFO - Finish loading [yelp-200k]-[origin] dataset
+Mon 05 Oct 2026 13:31:24 INFO - Epoch 1/30: loss=94.892598
+Mon 05 Oct 2026 13:31:29 INFO - Epoch 2/30: loss=55.209678
+Mon 05 Oct 2026 13:31:33 INFO - Epoch 3/30: loss=53.790600
+Mon 05 Oct 2026 13:31:38 INFO - Epoch 4/30: loss=52.869442
+Mon 05 Oct 2026 13:31:39 INFO - Epoch 1/30: loss=330.546667
+Mon 05 Oct 2026 13:31:43 INFO - Epoch 5/30: loss=52.499163
+Mon 05 Oct 2026 13:31:48 INFO - Epoch 6/30: loss=52.081708
+Mon 05 Oct 2026 13:31:53 INFO - Epoch 2/30: loss=199.100655
+Mon 05 Oct 2026 13:31:53 INFO - Epoch 7/30: loss=51.810483
+Mon 05 Oct 2026 13:31:58 INFO - Epoch 8/30: loss=51.749569
+Mon 05 Oct 2026 13:32:04 INFO - Epoch 9/30: loss=51.574238
+Mon 05 Oct 2026 13:32:10 INFO - Epoch 3/30: loss=191.823077
+Mon 05 Oct 2026 13:32:12 INFO - Epoch 10/30: loss=51.554172
+Mon 05 Oct 2026 13:32:19 INFO - Epoch 11/30: loss=51.377210
+Mon 05 Oct 2026 13:32:24 INFO - Epoch 12/30: loss=51.321960
+Mon 05 Oct 2026 13:32:27 INFO - Epoch 4/30: loss=187.706967
+Mon 05 Oct 2026 13:32:31 INFO - Epoch 13/30: loss=51.195776
+Mon 05 Oct 2026 13:32:36 INFO - Epoch 14/30: loss=51.192612
+Mon 05 Oct 2026 13:32:41 INFO - Epoch 15/30: loss=51.139372
+Mon 05 Oct 2026 13:32:42 INFO - Epoch 5/30: loss=185.047029
+Mon 05 Oct 2026 13:32:46 INFO - Epoch 16/30: loss=51.009793
+Mon 05 Oct 2026 13:32:50 INFO - Epoch 17/30: loss=50.952623
+Mon 05 Oct 2026 13:32:55 INFO - Epoch 6/30: loss=183.380480
+Mon 05 Oct 2026 13:32:55 INFO - Epoch 18/30: loss=51.006350
+Mon 05 Oct 2026 13:33:02 INFO - Epoch 19/30: loss=50.937181
+Mon 05 Oct 2026 13:33:09 INFO - Epoch 20/30: loss=50.863772
+Mon 05 Oct 2026 13:33:14 INFO - Epoch 7/30: loss=181.917434
+Mon 05 Oct 2026 13:33:16 INFO - Epoch 21/30: loss=50.841752
+Mon 05 Oct 2026 13:33:24 INFO - Epoch 22/30: loss=50.760665
+Mon 05 Oct 2026 13:33:32 INFO - Epoch 23/30: loss=50.773517
+Mon 05 Oct 2026 13:33:35 INFO - Epoch 8/30: loss=180.664781
+Mon 05 Oct 2026 13:33:39 INFO - Epoch 24/30: loss=50.658139
+Mon 05 Oct 2026 13:33:45 INFO - Epoch 25/30: loss=50.675098
+Mon 05 Oct 2026 13:33:52 INFO - Epoch 26/30: loss=50.671298
+Mon 05 Oct 2026 13:33:53 INFO - Epoch 9/30: loss=179.579786
+Mon 05 Oct 2026 13:34:02 INFO - Epoch 27/30: loss=50.558819
+Mon 05 Oct 2026 13:34:13 INFO - Epoch 28/30: loss=50.596017
+Mon 05 Oct 2026 13:34:22 INFO - Epoch 10/30: loss=178.585184
+Mon 05 Oct 2026 13:34:34 INFO - Epoch 30/30: loss=50.587367
+Mon 05 Oct 2026 13:34:35 INFO - Trial 0, fold 0: validation NDCG@10=0.018464587718
+Mon 05 Oct 2026 13:34:46 INFO - Epoch 11/30: loss=177.963800
+Mon 05 Oct 2026 13:34:55 INFO - Epoch 1/30: loss=282.287513
+Mon 05 Oct 2026 13:35:11 INFO - Epoch 12/30: loss=177.573359
+Mon 05 Oct 2026 13:35:13 INFO - Epoch 2/30: loss=190.165463
+Mon 05 Oct 2026 13:35:30 INFO - Epoch 3/30: loss=165.673082
+Mon 05 Oct 2026 13:35:36 INFO - Epoch 13/30: loss=176.719512

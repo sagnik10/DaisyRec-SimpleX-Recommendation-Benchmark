@@ -1,0 +1,22 @@
+# ML-50K
+python -c "
+import pandas as pd
+df = pd.read_csv('data/ml-50k/ratings.dat', sep='::', header=None,
+                 names=['user','item','rating','timestamp'], engine='python')
+print('=== ML-50K ===')
+print('Interactions:', len(df))
+print('Users:', df['user'].nunique())
+print('Items:', df['item'].nunique())
+print('Sparsity: {:.4f}%'.format(100*(1 - len(df)/(df['user'].nunique()*df['item'].nunique()))))
+"
+
+# Yelp-200K
+python -c "
+import pandas as pd
+df = pd.read_csv('data/yelp-200k/yelp_ratings.csv')
+print('=== Yelp-200K ===')
+print('Interactions:', len(df))
+print('Users:', df['user'].nunique())
+print('Items:', df['item'].nunique())
+print('Sparsity: {:.4f}%'.format(100*(1 - len(df)/(df['user'].nunique()*df['item'].nunique()))))
+"

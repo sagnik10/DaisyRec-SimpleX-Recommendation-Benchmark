@@ -1,0 +1,2 @@
+num_ng,factors,num_layers,dropout,lr,batch_size,reg_1,reg_2,ndcg
+4,16,2,0.30000000000000004,0.006500000000000001,256,0.0,0.01,0.0379

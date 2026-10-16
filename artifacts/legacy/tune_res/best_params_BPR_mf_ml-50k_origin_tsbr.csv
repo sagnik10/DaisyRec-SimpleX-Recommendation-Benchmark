@@ -1,0 +1,2 @@
+num_ng,factors,lr,batch_size,reg_1,reg_2,ndcg
+4,64,0.021,1024,0.001,0.008,0.1287

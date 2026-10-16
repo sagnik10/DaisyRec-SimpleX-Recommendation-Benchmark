@@ -1,0 +1,15 @@
+Sun 04 Oct 2026 09:01:00 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 30, 'tune_testset': False, 'tune_pack': '{}', 'algo_name': 'neumf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 50, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 256, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'yelp-200k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'ndcg', 'precision', 'coverage', 'gini', 'entropy'], 'factors': 16, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.0065, 'epochs': 30, 'reg_1': 0.0, 'reg_2': 0.01, 'model_name': 'NeuMF', 'GMF_model': None, 'MLP_model': None}
+Sun 04 Oct 2026 09:01:00 INFO - Current data path is: data/yelp-200k/, make sure you put the right raw data into it...
+Sun 04 Oct 2026 09:01:01 INFO - Finish loading [yelp-200k]-[origin] dataset
+Sun 04 Oct 2026 09:32:00 INFO - Finish training: yelp-200k origin neumf with BPR and uniform sampling, 1845.4154
+Sun 04 Oct 2026 09:32:00 INFO - Start Calculating Metrics...
+Sun 04 Oct 2026 09:32:34 INFO - ==========================
+Sun 04 Oct 2026 09:32:34 INFO - Generate recommend list...
+Sun 04 Oct 2026 09:32:34 INFO - ==========================
+Sun 04 Oct 2026 09:32:37 INFO - Save metric@k result to res folder...
+Sun 04 Oct 2026 09:32:41 INFO - Recall@10: 0.0185
+Sun 04 Oct 2026 09:32:41 INFO - NDCG@10: 0.0232
+Sun 04 Oct 2026 09:32:41 INFO - Precision@10: 0.0052
+Sun 04 Oct 2026 09:32:41 INFO - Coverage@10: 0.5070
+Sun 04 Oct 2026 09:32:41 INFO - Gini@10: 0.5106
+Sun 04 Oct 2026 09:32:41 INFO - Entropy@10: 11.9781

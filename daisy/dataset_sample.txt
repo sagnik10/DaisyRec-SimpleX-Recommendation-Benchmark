@@ -1,0 +1,54 @@
+##### MOVIELENS DATASET #####
+
+python -c "
+import pandas as pd
+
+# Load original MovieLens 1M
+df = pd.read_csv('../ml-1m/ratings.dat', sep='::', header=None,
+                 names=['user', 'item', 'rating', 'timestamp'], engine='python')
+print('Original ML-1M size:', len(df))
+
+# Random sample of 50,000 interactions
+df_sample = df.sample(n=50000, random_state=42)
+print('Sampled size:', len(df_sample))
+
+# Save in original :: format
+df_sample.to_csv('ratings_temp.csv', sep='\t', header=False, index=False)
+
+with open('ratings_temp.csv', 'r') as f_in, open('ratings.dat', 'w') as f_out:
+    for line in f_in:
+        f_out.write(line.strip().replace('\t', '::') + '\n')
+
+print('Saved data/ml-50k/ratings.dat')
+print('Users:', df_sample['user'].nunique())
+print('Items:', df_sample['item'].nunique())
+"
+
+
+##### YELP DATASET #####
+
+python -c "
+import pandas as pd
+
+# Load the full converted Yelp CSV
+# (change the path if your full file is in a different location)
+df = pd.read_csv('../yelp/yelp_ratings.csv')
+print('Original Yelp size:', len(df))
+
+# Random sample of 200,000 interactions
+df_sample = df.sample(n=200000, random_state=42)
+print('Sampled size:', len(df_sample))
+
+# Light 5-core filtering
+user_counts = df_sample['user'].value_counts()
+item_counts = df_sample['item'].value_counts()
+df_sample = df_sample[df_sample['user'].isin(user_counts[user_counts >= 5].index)]
+df_sample = df_sample[df_sample['item'].isin(item_counts[item_counts >= 5].index)]
+
+print('After 5-core filtering:', len(df_sample))
+print('Users:', df_sample['user'].nunique())
+print('Items:', df_sample['item'].nunique())
+
+df_sample.to_csv('yelp_ratings.csv', index=False)
+print('Saved data/yelp-200k/yelp_ratings.csv')
+"

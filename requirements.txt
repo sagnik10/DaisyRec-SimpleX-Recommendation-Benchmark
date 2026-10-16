@@ -1,0 +1,12 @@
+torch==2.5.1
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.5.2
+optuna==4.1.0
+matplotlib==3.9.2
+PyYAML==6.0.2
+colorama==0.4.6
+colorlog==6.9.0
+tqdm==4.67.1
+requests==2.32.3

@@ -1,0 +1,14 @@
+Tue 29 Sep 2026 20:22:57 INFO - {'gpu': '', 'seed': 2022, 'reproducibility': True, 'state': None, 'optimization_metric': 'ndcg', 'hyperopt_trail': 30, 'tune_testset': False, 'tune_pack': '{}', 'algo_name': 'mf', 'val_method': 'tsbr', 'test_method': 'tsbr', 'fold_num': 1, 'val_size': 0.1, 'test_size': 0.2, 'topk': 50, 'cand_num': 1000, 'sample_method': 'uniform', 'sample_ratio': 0, 'num_ng': 4, 'batch_size': 512, 'loss_type': 'BPR', 'init_method': 'default', 'optimizer': 'default', 'early_stop': False, 'data_path': 'data/', 'res_path': None, 'dataset': 'ml-50k', 'prepro': 'origin', 'level': 'ui', 'UID_NAME': 'user', 'IID_NAME': 'item', 'INTER_NAME': 'rating', 'TID_NAME': 'timestamp', 'binary_inter': True, 'positive_threshold': None, 'metrics': ['recall', 'mrr', 'ndcg', 'hit', 'precision'], 'factors': 32, 'epochs': 30, 'lr': 0.021, 'reg_1': 0.0, 'reg_2': 0.008}
+Tue 29 Sep 2026 20:22:57 INFO - Current data path is: data/ml-50k/, make sure you put the right raw data into it...
+Tue 29 Sep 2026 20:22:57 INFO - Finish loading [ml-50k]-[origin] dataset
+Tue 29 Sep 2026 20:29:23 INFO - Finish training: ml-50k origin mf with BPR and uniform sampling, 381.4972
+Tue 29 Sep 2026 20:29:23 INFO - Start Calculating Metrics...
+Tue 29 Sep 2026 20:29:26 INFO - ==========================
+Tue 29 Sep 2026 20:29:26 INFO - Generate recommend list...
+Tue 29 Sep 2026 20:29:26 INFO - ==========================
+Tue 29 Sep 2026 20:29:26 INFO - Save metric@k result to res folder...
+Tue 29 Sep 2026 20:29:28 INFO - Recall@10: 0.0333
+Tue 29 Sep 2026 20:29:28 INFO - MRR@10: 0.0672
+Tue 29 Sep 2026 20:29:28 INFO - NDCG@10: 0.0860
+Tue 29 Sep 2026 20:29:28 INFO - Hit Ratio@10: 0.1720
+Tue 29 Sep 2026 20:29:28 INFO - Precision@10: 0.0206

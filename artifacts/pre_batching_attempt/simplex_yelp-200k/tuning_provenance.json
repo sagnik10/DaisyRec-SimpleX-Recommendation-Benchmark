@@ -1,0 +1,104 @@
+{
+  "platform": "Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "torch": "2.5.1+cpu",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "scipy": "1.14.1",
+  "optuna": "4.1.0",
+  "device": "cpu",
+  "dataset_file": "data/yelp-200k/yelp_ratings.csv",
+  "dataset_sha256": "be32be17127cc7280d3fd4423f3badc971029be4fdd7a39366d522941d4550cb",
+  "code_sha256": "6b4b0b868115bf33e7a8c6e43931c9bf2d416a16f7454f843e50fca13c0ad48d",
+  "recipe": {
+    "gpu": "",
+    "seed": 2022,
+    "reproducibility": true,
+    "state": null,
+    "optimization_metric": "ndcg",
+    "hyperopt_trail": 8,
+    "num_workers": 0,
+    "torch_threads": 2,
+    "study_name": null,
+    "study_storage": null,
+    "run_dir": "artifacts/verified",
+    "tune_testset": false,
+    "tune_pack": "{\"factors\":{\"min\":32,\"max\":128,\"step\":32},\"lr\":{\"min\":0.0005,\"max\":0.01,\"step\":0.0005},\"margin\":[0.5,0.7,0.9],\"negative_weight\":[5,10,20],\"dropout\":{\"min\":0.0,\"max\":0.3,\"step\":0.1},\"batch_size\":[128,256,512]}",
+    "algo_name": "simplex",
+    "val_method": "tsbr",
+    "test_method": "tsbr",
+    "fold_num": 1,
+    "val_size": 0.1,
+    "test_size": 0.2,
+    "topk": 10,
+    "cand_num": 1000,
+    "sample_method": "uniform",
+    "sample_ratio": 0,
+    "num_ng": 4,
+    "batch_size": 256,
+    "loss_type": "BPR",
+    "init_method": "default",
+    "optimizer": "default",
+    "early_stop": false,
+    "data_path": "data/",
+    "res_path": null,
+    "dataset": "yelp-200k",
+    "prepro": "origin",
+    "level": "ui",
+    "UID_NAME": "user",
+    "IID_NAME": "item",
+    "INTER_NAME": "rating",
+    "TID_NAME": "timestamp",
+    "binary_inter": true,
+    "positive_threshold": null,
+    "metrics": [
+      "recall",
+      "ndcg",
+      "precision",
+      "coverage",
+      "gini",
+      "entropy"
+    ],
+    "factors": 64,
+    "lr": 0.008,
+    "reg_1": 0,
+    "reg_2": 0,
+    "epochs": 30,
+    "margin": 0.7,
+    "negative_weight": 10,
+    "dropout": 0.0,
+    "gamma": 0.5
+  },
+  "search_space": {
+    "factors": {
+      "min": 32,
+      "max": 128,
+      "step": 32
+    },
+    "lr": {
+      "min": 0.0005,
+      "max": 0.01,
+      "step": 0.0005
+    },
+    "margin": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "negative_weight": [
+      5,
+      10,
+      20
+    ],
+    "dropout": {
+      "min": 0.0,
+      "max": 0.3,
+      "step": 0.1
+    },
+    "batch_size": [
+      128,
+      256,
+      512
+    ]
+  }
+}

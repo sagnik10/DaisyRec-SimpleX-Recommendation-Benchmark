@@ -1,0 +1,8 @@
+{
+  "source_url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+  "download_date": "2026-10-05",
+  "archive_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+  "source_interactions": 1000209,
+  "seed": 42,
+  "exact_sample_and_row_order_match": true
+}
